@@ -1,15 +1,33 @@
-<html>
-<scipt src="./">
+console.log("hello world")
+
+        var nombre = 'juan'
+        let apellido = 'lol' 
+        const edad = 30
+
+        console.log(nombre)
+        console.log(apellido)
+        console.log(edad)
 
 
+        {
+//let solo crea las variables dentro de un bloque osea que afuera de las llaves no incide lo de adentro
+            let nombre = 'lucas'
+            let apellido = 'moura'
+            console.log('----------------dentro llaves--------------')
+            console.log(nombre+' '+apellido)
+            //template string
+            console.log(`${nombre} ${apellido}`)
+            console.log(apellido)
+            console.log(edad)
+
+            {
 
 
+              let nombre = 'marias'  
+            }
 
+        }
 
-</scipt>
+        var correo = 'lol@hotmail.com'
 
-
-
-
-
-</html>
+        console.log('----------------fuera llaves--------------')
