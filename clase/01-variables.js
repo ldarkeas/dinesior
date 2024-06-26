@@ -1,33 +1,33 @@
-console.log("hello world")
+// console.log('Hola mundo!!!')
+// Infiere el tipo de dato
 
-        var nombre = 'juan'
-        let apellido = 'lol' 
-        const edad = 30
+// ❌ ya no se debe usar
 
-        console.log(nombre)
-        console.log(apellido)
-        console.log(edad)
+// define las variables a nivel global
+// no valida que ya haya sido declara otra 
+// variable con el mismo nombre
+var nombre = 'Juan'
 
+// ✅ forma correcta
+// define las variables a nivel de bloque
+let apellido = 'Alvarenga'
 
-        {
-//let solo crea las variables dentro de un bloque osea que afuera de las llaves no incide lo de adentro
-            let nombre = 'lucas'
-            let apellido = 'moura'
-            console.log('----------------dentro llaves--------------')
-            console.log(nombre+' '+apellido)
-            //template string
-            console.log(`${nombre} ${apellido}`)
-            console.log(apellido)
-            console.log(edad)
+const edad = 30
+{
+    let nombre = 'Pedro'
+    let apellido = 'Perez'
 
-            {
-
-
-              let nombre = 'marias'  
-            }
-
-        }
-
-        var correo = 'lol@hotmail.com'
-
-        console.log('----------------fuera llaves--------------')
+    {
+        nombre = 'Maria'
+    }
+    // un nuevo Scope
+    console.log('------- dentro de las llaves -------')
+    //Template strings
+    console.log(`${nombre} ${apellido}`)
+    console.log(nombre + ' ' + apellido + ' ' + edad)
+    console.log()
+    console.log(edad)
+}
+console.log('------- fuera de las llaves -------')
+console.log(nombre)
+console.log(apellido)
