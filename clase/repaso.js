@@ -1,56 +1,56 @@
 
 
 
-function suma(a, b) {
+// function suma(a, b) {
 
-    return new Promise((resolve, reject) => {
-        resolve(a + b)
-    })
+//     return new Promise((resolve, reject) => {
+//         resolve(a + b)
+//     })
 
-    //era el valor originar, pero se cambio por el valor de la promesa
-    return a + b;
-}
+//     //era el valor originar, pero se cambio por el valor de la promesa
+//     return a + b;
+// }
 
-async function resta(a, b) {
-
-
-    const resultado = await division(a, b)
-
-    if (resultado === Infinity) return
-
-    return new Promise((resolve, reject) => {
-
-        const random = Math.random()
-
-        if (random > 0.5)
-            resolve(a - b)
-        else
-            reject('No se pudo realizar la resta')
+// async function resta(a, b) {
 
 
-    }
-    )
-}
+//     const resultado = await division(a, b)
 
-const division = async (a, b) => {
-    return a / b;
-}
+//     if (resultado === Infinity) return
 
-resta(5, 3).then(resultado => {
-    console.log(resultado)
-})
+//     return new Promise((resolve, reject) => {
+
+//         const random = Math.random()
+
+//         if (random > 0.5)
+//             resolve(a - b)
+//         else
+//             reject('No se pudo realizar la resta')
 
 
-async function calcularCosas() {
-    const resultadoSuma = await suma(2, 3);
-    const resultadoResta = await resta(5, 3);
+//     }
+//     )
+// }
 
-    return resultadoSuma + resultadoResta;
+// const division = async (a, b) => {
+//     return a / b;
+// }
 
-}
+// resta(5, 3).then(resultado => {
+//     console.log(resultado)
+// })
 
-console.log(suma(2, 3)); // 5
-console.log(resta(5, 3)); // 2
+
+// async function calcularCosas() {
+//     const resultadoSuma = await suma(2, 3);
+//     const resultadoResta = await resta(5, 3);
+
+//     return resultadoSuma + resultadoResta;
+
+// }
+
+// console.log(suma(2, 3)); // 5
+// console.log(resta(5, 3)); // 2
 
 ////////////
 
@@ -122,5 +122,84 @@ console.log(resta(5, 3)); // 2
 // console.log(city)
 
 //fin
+
+
+
+//////////////
+
+function nueva(a,b) { 
+    
+    return new Promise((resolve,reject)=>{
+        const l = 1;
+
+        if (l == 1){
+            resolve(a+b)
+        }else{
+            reject(a-b)
+        }
+    });
+}
+nueva(1,1)
+.then((mensaje)=>{
+    console.log(mensaje)
+})
+
+nueva(1,1)
+.catch((error)=>{
+    console.log('error',error)
+})
+
+
+//////////
+
+
+async function nueva(a, b) {
+    const l = 1;
+  
+    if (l == 1) {
+      return a + b;
+    } else {
+      throw new Error;
+    }
+  }
+  
+  async function ejecutarNueva() {
+    try {
+      const mensaje = await nueva(1, 1);
+      console.log(mensaje); // 2
+    } catch (error) {
+      console.log('error', error);
+    }
+  }
+  
+  ejecutarNueva();
+
+
+
+//////////
+
+//   function lol(a,b) {
+//     return new Promise((resolve,reject)=>{
+//         const l = 4
+
+//         if (l==1){
+//             resolve(a+b)
+
+//         }else{
+//             reject(error)
+//         }
+//     })
+//   }
+
+//   lol(1,1)
+//         .then((mensaje)=>{
+//             console.log(mensaje)
+//         })
+// lol(1,1)
+//         .catch((error)=>{
+//             console.log(error)
+
+
+//         })
 
 
