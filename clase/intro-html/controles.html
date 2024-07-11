@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Controles de HTML</title>
+
 </head>
+
 <body>
 
-    <h1>Controles de html</h1>
+    <h1 id="titulo">Controles de HTML</h1>
     <br>
     <hr>
 
-    <h2>input</h2>
-    <input type="number" value="6" min="5" max="10">
-    <input type="text" value="eminen" min="5" maxlength="10">
-    <input type="email" placeholder="eminen">
-    <input type="password"  name="" id="">
-    
+    <h2 id="subtitulo">Input</h2>
+
+    <form action="#" method="get">
+
+        <input type="text" required name="nombre" value="luis">
+
+        <br><br>
+
+        <input type="email" required name="correo" value="ll@ll.com">
+
+        <br><br>
+   
+        <input type="password" name="contrasenia" id="" value="123">
+
+        <br><br>
+
+        <!-- <input type="submit" value="Guardar"> -->
+        <button type="button" id="guardar"> Guardar </button>
+        <button type="button" id="cancelar"> BUSCA LA VIDA Y LA ENCONTRARAS </button>
+    </form>
+
+    <!-- <input type="number" value="8"  min="5" max="10"> -->
+
+
+    <!-- TODO: cargar desde el head -->
+    <script src="./js/controles.js"></script>
 </body>
+
 </html>
