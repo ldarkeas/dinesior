@@ -8,7 +8,7 @@
 const titulo = document.getElementById('titulo')
 
 titulo.innerText = 'Valor cambiado desde JS'
-titulo.style.color = 'white'
+titulo.style.color = 'red'
 titulo.style.background = '#242424'
 titulo.style.padding = '24px'
 
@@ -24,27 +24,33 @@ const guardar = document.querySelector('#guardar')
 const inputs = document.querySelectorAll('input')
 const form = document.querySelector('form')
 
-//asignar un listener
-guardar.addEventListener('click', (event) => {
+// asignar un listener
+// guardar.addEventListener('click', (event) => {
 
-    const data = {}
+//     const data = {}
 
-    inputs.forEach(({ value, name }) => {
-        data[name] = value
+//     inputs.forEach(({ value, name }) => {
+//         data[name] = value
 
-    })
+//     })
 
-    console.log(data)
+//     console.log(data)
 
-})
+// })
+//////
 
 
 form.addEventListener('submit', (event) => {
 
-    // Evitar que se recargue la página
+    event.preventDefault() // detenga el comportamiento por defecto
 
+    const datosFormulario = new FormData(form)
+    const datoss = Object.fromEntries(datosFormulario)
 
-    // construir un objeto con los datos del formulario de 2 maneras diferentes
+    console.log(datoss)
 
 
 })
+
+
+/////////
