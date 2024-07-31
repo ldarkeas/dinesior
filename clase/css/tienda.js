@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         body += `
         <article class="card">
                <img 
-               width="100"
+               class="imagen-maxima"
                src="${image}" 
                alt="${title}">
    
