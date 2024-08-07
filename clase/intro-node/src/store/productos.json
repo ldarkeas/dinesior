@@ -1,0 +1,10 @@
+[
+    {
+      "id": "a0872e7c-7dc6-4114-b6e4-9d4bfbe4a77a",
+      "title": "Producto creado desde el API",
+      "description": "Esta debe ser una descripción de al menos 20 caracteres",
+      "price": 1000,
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    }
+  ]
